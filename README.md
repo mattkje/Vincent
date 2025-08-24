@@ -1,29 +1,27 @@
-# Vincent
+<p align="center">
+  <img src="src/assets/logo.png" alt="Vincent! Logo" width="180"/>
+</p>
 
-This template should help get you started developing with Vue 3 in Vite.
+<h1 align="center">Vincent!</h1>
 
-## Recommended IDE Setup
+*Vincent!* is an image conversion tool that allows users to convert images between various formats with ease. It supports a wide range of image formats and provides a user-friendly interface for seamless conversions.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Customize configuration
+## Planned Features
+- Support for multiple image formats (JPEG, PNG, BMP, GIF, TIFF, etc.)
+- Batch conversion of multiple images at once
+- Adjustable quality settings for output images
+- Drag-and-drop functionality for easy file selection
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Tech Stack
+- Vue.js
+- Electron
+- Vite
+- Node.js
 
-## Project Setup
+---
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
