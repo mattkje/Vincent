@@ -1,22 +1,44 @@
 {
-  "name": "vincent",
-  "version": "0.0.0",
+  "name": "Vincent!",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
+  "main": "dist/electron-main.js",
+  "description": "An Image Conversion Tool",
+  "author": "Shelstad",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "concurrently \"npm:dev:renderer\" \"npm:dev:main\"",
+    "dev:renderer": "vite",
+    "dev:main": "electron electron-main.js",
+    "build": "vite build && cp electron-main.js dist/electron-main.js && cp preload.js dist/preload.js",
+    "preview": "vite preview",
+    "start": "npm run dev",
+    "dist": "npm run build && electron-builder"
   },
   "dependencies": {
-    "vue": "^3.5.18"
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
+    "concurrently": "^9.2.0",
+    "electron": "^37.3.1",
+    "electron-builder": "^26.0.12",
     "vite": "^7.0.6",
-    "vite-plugin-vue-devtools": "^8.0.0"
+    "vite-plugin-vue-devtools": "^8.0.0",
+    "wait-on": "^8.0.4"
+  },
+  "build": {
+    "mac": {
+      "identity": "Apple Development: Matti Kjellstadli (T6P786Y4M7)"
+    },
+    "icon": "src/assets/vincent.icns",
+    "files": [
+      "dist/**/*",
+      "electron-main.js"
+    ]
   }
 }

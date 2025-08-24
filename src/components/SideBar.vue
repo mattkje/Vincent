@@ -1,87 +1,57 @@
 <template>
-  <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
-    <div class="details">
-      <h3>
-        <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="@/assets/logo.png" alt="Logo" />
     </div>
-  </div>
+    <nav class="options">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
 </template>
 
+<script>
+export default {
+  name: 'SideBar'
+}
+</script>
+
 <style scoped>
-.item {
-  margin-top: 2rem;
+.sidebar {
+  width: 220px;
+  height: calc(100vh - 32px);
+  background: #23272f;
+  color: #fff;
   display: flex;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
 }
-
-.details {
-  flex: 1;
-  margin-left: 1rem;
+.logo img {
+  width: 120px;
+  margin-bottom: 40px;
 }
-
-i {
-  display: flex;
-  place-items: center;
-  place-content: center;
-  width: 32px;
-  height: 32px;
-
-  color: var(--color-text);
+.options ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
 }
-
-h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: var(--color-heading);
+.options li {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
 }
-
-@media (min-width: 1024px) {
-  .item {
-    margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
-  }
-
-  i {
-    top: calc(50% - 25px);
-    left: -26px;
-    position: absolute;
-    border: 1px solid var(--color-border);
-    background: var(--color-background);
-    border-radius: 8px;
-    width: 50px;
-    height: 50px;
-  }
-
-  .item:before {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    bottom: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:after {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:first-of-type:before {
-    display: none;
-  }
-
-  .item:last-of-type:after {
-    display: none;
-  }
+.options a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+.options a:hover {
+  color: #4fc08d;
 }
 </style>

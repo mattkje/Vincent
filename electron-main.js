@@ -1,10 +1,15 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
+    width: 1000,
     height: 600,
+    icon: path.join(__dirname, '/assets/icon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
@@ -12,8 +17,8 @@ function createWindow() {
     },
   });
 
-  // Load Vite dev server in development
-  win.loadURL('http://localhost:5173');
+  win.loadURL('http://localhost:5173').then(r =>
+  console.log(r));
 }
 
 app.whenReady().then(createWindow);
