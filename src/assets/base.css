@@ -1,60 +1,52 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-    --vt-c-white: #ffffff;
-    --vt-c-white-soft: #f8f8f8;
-    --vt-c-white-mute: #f2f2f2;
+    --background-1: #ffffff;
+    --background-2: #f8f8f8;
+    --background-backdrop: #f0f0f0;
+    --background-translucent: rgba(255, 255, 255, 0.8);
 
-    --vt-c-black: #181818;
-    --vt-c-black-soft: #222222;
-    --vt-c-black-mute: #282828;
+    --border-1: #e0e0e0;
+    --border-2: #d0d0d0;
 
-    --vt-c-indigo: #2c3e50;
+    --main-color: #3286ff;
+    --main-color-hover: #4285d6;
+    --main-color-weak: #dae8ff;
 
-    --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-    --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-    --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-    --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+    --text-1: #2c3e50;
+    --text-2: #7B7B7B;
+    --text-3: #a8a8a8;
+    --text-inverse: #e3e3e3;
 
-    --vt-c-text-light-1: var(--vt-c-indigo);
-    --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-    --vt-c-text-dark-1: var(--vt-c-white);
-    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+    --shadow: rgba(0, 0, 0, 0.05)
 }
 
-/* semantic color variables for this project */
-:root {
-    --color-background: var(--vt-c-white);
-    --color-background-soft: var(--vt-c-white-soft);
-    --color-background-mute: var(--vt-c-white-mute);
-
-    --color-border: var(--vt-c-divider-light-2);
-    --color-border-hover: var(--vt-c-divider-light-1);
-
-    --color-heading: var(--vt-c-text-light-1);
-    --color-text: var(--vt-c-text-light-1);
-
-    --section-gap: 160px;
-}
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: var(--vt-c-black);
-        --color-background-soft: var(--vt-c-black-soft);
-        --color-background-mute: var(--vt-c-black-mute);
+        --background-1: #252526;
+        --background-2: #1e1e1e;
+        --background-backdrop: #2d2d30;
+        --background-translucent: rgba(30, 30, 30, 0.8);
 
-        --color-border: var(--vt-c-divider-dark-2);
-        --color-border-hover: var(--vt-c-divider-dark-1);
+        --border-1: #3c3c3c;
+        --border-2: #4b4b4b;
+        --main-color: #5399f5;
+        --main-color-hover: #4285d6;
+        --main-color-weak: #a0c1ea;
+        --text-1: #e7e7e7;
+        --text-2: #c7c7c7;
+        --text-3: #a8a8a8;
+        --text-inverse: #383838;
 
-        --color-heading: var(--vt-c-text-dark-1);
-        --color-text: var(--vt-c-text-dark-2);
+        --shadow: rgba(0, 0, 0, 0.3);
+
     }
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    color: var(--color-text);
-    background: var(--color-background);
+    color: var(--text-1);
+    background: var(--background-2);
+    transition: color 0.5s,
+    background-color 0.5s;
     line-height: 1.6;
     font-family: Inter,
     -apple-system,

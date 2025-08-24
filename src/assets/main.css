@@ -1,7 +1,96 @@
 @import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-Regular.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-Bold.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-Black.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-Light.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-Thin.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-Medium.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-SemiBold.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-ExtraBold.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('@/assets/fonts/Metropolis/Metropolis-ExtraLight.otf') format('opentype'),
+  url('@/assets/fonts/Metropolis/Metropolis-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
 
 #app {
+  font-family: Metropolis, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-weight: normal;
+  overflow: hidden; /* Optional: prevents scrollbars */
 }
+
+
+
+
+
+
