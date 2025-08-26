@@ -1,15 +1,11 @@
 <script setup>
-
-
+const version = __APP_VERSION__
+console.log('App version:', __APP_VERSION__)
 </script>
 
 <template>
   <nav class="menubar">
     <div class="menu-links">
-      <router-link class="nav-link" active-class="active-link" to="/">
-        <img src="@/assets/icons/home.svg" alt="Logo"/>
-        <span class="nav-text">Home</span>
-      </router-link>
       <router-link class="nav-link" active-class="active-link" to="/convert">
         <img src="@/assets/icons/convert.svg" alt="Logo"/>
         <span class="nav-text">Convert</span>
@@ -35,6 +31,7 @@
         <img src="@/assets/icons/info2.svg" alt="Logo"/>
         <span class="nav-text">About</span>
       </router-link>
+      <p class="version-text"> v{{ version }} </p>
     </div>
   </nav>
 </template>
@@ -103,6 +100,14 @@
 
 .active-link img {
   filter: brightness(0) saturate(100%) invert(41%) sepia(92%) saturate(1232%) hue-rotate(190deg) brightness(97%) contrast(97%);
+}
+
+.version-text {
+  color: var(--text-2);
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: auto;
+  padding: 0.5rem 0;
 }
 
 @media (prefers-color-scheme: dark) {

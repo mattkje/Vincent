@@ -1,9 +1,18 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
+import pkg from 'electron-updater';
+const { autoUpdater } = pkg;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+app.on('ready', () => {
+    autoUpdater.checkForUpdatesAndNotify()
+    autoUpdater.on('update-downloaded', () => {
+        autoUpdater.quitAndInstall()
+    })
+})
 
 function createWindow() {
   const win = new BrowserWindow({
